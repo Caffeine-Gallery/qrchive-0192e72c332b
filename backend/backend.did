@@ -1,0 +1,9 @@
+type UrlEntry = 
+ record {
+   timestamp: int;
+   url: text;
+ };
+service : {
+  addUrl: (text) -> (vec UrlEntry);
+  getHistory: () -> (vec UrlEntry) query;
+}
